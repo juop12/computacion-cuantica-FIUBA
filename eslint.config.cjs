@@ -1,32 +1,46 @@
-const {
-    defineConfig,
-} = require("eslint/config");
-
-const parser = require("astro-eslint-parser");
+const { defineConfig } = require("eslint/config");
 const js = require("@eslint/js");
+const tsParser = require("@typescript-eslint/parser");
+const tsPlugin = require("@typescript-eslint/eslint-plugin");
+const astroParser = require("astro-eslint-parser");
+const eslintPluginAstro = require("eslint-plugin-astro");
 
-const {
-    FlatCompat,
-} = require("@eslint/eslintrc");
+module.exports = defineConfig([
+  // Global recommended JavaScript rules
+  js.configs.recommended,
 
-const compat = new FlatCompat({
-    baseDirectory: __dirname,
-    recommendedConfig: js.configs.recommended,
-    allConfig: js.configs.all
-});
-
-module.exports = defineConfig([{}, {
+  // Astro files
+  {
     files: ["**/*.astro"],
-
     languageOptions: {
-        parser: parser,
-
-        parserOptions: {
-            parser: "@typescript-eslint/parser",
-            extraFileExtensions: [".astro"],
-        },
+      parser: astroParser,
+      parserOptions: {
+        parser: tsParser, // nested parser for TypeScript inside Astro
+        extraFileExtensions: [".astro"],
+      },
     },
+    plugins: {
+      astro: eslintPluginAstro,
+    },
+    rules: {
+      // Keep rules light, only warn
+      "no-unused-vars": "warn",
+    },
+  },
 
-    extends: compat.extends("plugin:astro/recommended"),
-    rules: {},
-}]);
+  // TypeScript files
+  {
+    files: ["**/*.ts", "**/*.tsx"],
+    languageOptions: {
+      parser: tsParser,
+    },
+    plugins: {
+      "@typescript-eslint": tsPlugin,
+    },
+    rules: {
+      ...tsPlugin.configs.recommended.rules, // <--- recommended rules directly
+      "@typescript-eslint/no-explicit-any": "warn",
+      "@typescript-eslint/no-unused-vars": "warn",
+    },
+  },
+]);
