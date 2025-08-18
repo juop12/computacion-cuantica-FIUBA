@@ -1,0 +1,51 @@
+{
+  // ==============================
+  // EDITOR BASICS
+  // ==============================
+  "editor.formatOnSave": false,         // ❌ do not auto-format on save
+  "editor.codeActionsOnSave": {},       // ❌ no ESLint autofix either
+  "editor.defaultFormatter": null,      // no global formatter
+
+  // ===== Editor consistency =====
+  "editor.tabSize": 2,                  // Standard in JS/TS/Astro projects
+  "editor.insertSpaces": true,          // Use spaces, not tabs
+  "files.eol": "\n",                    // Consistent Unix line endings
+  "files.encoding": "utf8",
+
+  // ==============================
+  // ESLINT SETTINGS
+  // ==============================
+  "eslint.enable": true,
+  "eslint.run": "onType",               // highlights issues as you type
+  "eslint.format.enable": false,        // ESLint won't format your code
+  "eslint.codeActionsOnSave.rules": null,
+
+  // ==============================
+  // FILE SUPPORT
+  // ==============================
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "astro" // 👈 important for Astro
+  ],
+
+  // ==============================
+  // UI / FEEDBACK
+  // ==============================
+  "editor.quickSuggestions": {
+    "strings": true
+  },
+  "editor.suggestSelection": "first",
+  "editor.minimap.enabled": true,       // optional, keep minimap
+  "editor.hover.enabled": true,         // see ESLint messages on hover
+
+  // ==============================
+  // EXTENSIONS
+  // ==============================
+
+  // ===== TypeScript =====
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+}
