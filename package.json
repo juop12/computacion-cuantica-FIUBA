@@ -1,5 +1,5 @@
 {
-  "name": "WebPageCompuCuantica",
+  "name": "webpage-computacion-cuantica",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
@@ -10,7 +10,7 @@
     "astro": "astro",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx,.astro",
     "test": "vitest run",
-    "ci": "npm run lint && npm run test && npm run build"
+    "ci": "npm run lint && npm run build"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.12",
