@@ -1,8 +1,0 @@
-Cree el repositorio con Astro.
-Cree el deploy en Netlify.
-Descargue las dependencias de TailwindCSS, Eslint y Vitest.
-Configure el linter y el vitest.
-Configure el ambiente de VsCode.
-Agregue vitest como dependencia.
-Cambio el nombre de este archivo a changelog y del package del package.json y quité los test en ci script.
-Agregaré los test cuando haya algo a lo que le deba hacer TDD si agrego alguna funcionalidad extra.
