@@ -1,3 +1,10 @@
+w
+
+* Se crea el archivo BACKLOG.md donde se determina el alcance de la versión 1.0.0 de la aplicación
+
+* Se arregla un bug de versiones de Tailwind que no dejaba buildear correctamente la página principal
+
+* Se actualizan dependencias con vulnerabilidades de manera automática
 
 #### [0.0.1] - 19-08-2025
 
