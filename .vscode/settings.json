@@ -39,7 +39,7 @@
   },
   "editor.suggestSelection": "first",
   "editor.minimap.enabled": true,       // optional, keep minimap
-  "editor.hover.enabled": true,         // see ESLint messages on hover
+  "editor.hover.enabled": "on",         // see ESLint messages on hover
 
   // ==============================
   // EXTENSIONS
