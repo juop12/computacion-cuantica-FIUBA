@@ -20,11 +20,6 @@ export default {
           950: '#172554',
         },
 
-        'light-text': '#1f2937',           // Light mode text color
-        'light-text-secondary': '#6b7280', // Light mode secondary text
-        'dark-text': '#f1f5f9',            // Dark mode text color
-        'dark-text-secondary': '#94a3b8',  // Dark mode secondary text
-
         // Light mode colors
         light: {
           bg: '#ffffff',           // Main background
