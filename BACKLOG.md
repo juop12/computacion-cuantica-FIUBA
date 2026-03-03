@@ -13,5 +13,5 @@
   - Main body con los archivos de cada tema 
 * [ ] Dependencias y archivos de configuración actualizados.
   - Checkear que Astro, Tailwind, Eslint, Typescript, Vitest, Netlify esten todos actualizados y no usen archivos de config deprecados
-* [ ] Deploy automatizado con checkeos de Github Actions.
-  - Crear los github actions que buildeen el proyecto, corran los tests y corran el linter
+* [ ] Deploy automatizado con checkeos de GitHub Actions.
+  - Crear los GitHub Actions que buildeen el proyecto, corran los tests y corran el linter

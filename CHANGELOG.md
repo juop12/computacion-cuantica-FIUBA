@@ -1,4 +1,6 @@
-w
+### Changelog:
+
+#### [0.0.2] - 03-03-2026
 
 * Se crea el archivo BACKLOG.md donde se determina el alcance de la versión 1.0.0 de la aplicación
 
